@@ -11,18 +11,17 @@ var EmployeeSnippet = publicWidget.Widget.extend({
         init: function () {
             this._super.apply(this, arguments);
             this.rpc = this.bindService("rpc");
-            this.data = [];
+            // this.data = [];
         },
         /**
          *
          * @override
          */
         start: async function () {
-            console.log('gfdfggf')
-            this.data = await this.rpc("/website/departments")
-            console.log(this.$("#temp_data"))
-            console.log(this.data)
-            this.$("#temp_data").replaceWith(renderToElement("department-data", {data: this.data}));
+            const dept_id = (this.target.dataset.tempName && JSON.parse(this.target.dataset.tempName)[0].id) || -1;
+            const data = await this.rpc("/website/departments", {dept_id: dept_id});
+            debugger;
+            document.querySelector("#temp_data").replaceChildren(renderToElement("department-data", {data: data}));
         },
     });
 publicWidget.registry.s_employee = EmployeeSnippet;

@@ -1,0 +1,44 @@
+/* Style for department card */
+.department-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+/* Style for department header */
+.department-header {
+    margin-bottom: 10px;
+}
+
+.department-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.department-manager {
+    color: #666;
+}
+
+/* Style for employee card */
+.employee-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.employee-avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.employee-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}

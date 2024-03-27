@@ -1,6 +1,6 @@
 <odoo>
     <template id="s_employee" name="employee">
-        <section class="container dynamic_snippet_employee">
+        <section class="dynamic_snippet_employee">
             <div id="temp_data"/>
         </section>
     </template>
@@ -11,14 +11,4 @@
             <t t-snippet="snippet.s_employee" string="Employee" />
         </xpath>
     </template>
-
-    <!-- Options -->
-    <template id="external_snippets_options" inherit_id="website.snippet_options">
-        <xpath expr="." position="inside">
-            <div data-js="EmployeeSnippetOptions" data-selector=".dynamic_snippet_employee"> 
-                <we-checkbox string="Department" data-no-preview="true" data-show-confirm="true" data-attribute-name="showConfirm" data-select-data-attribute="true" data-toggle-option="true"/>
-            </div>
-        </xpath>
-    </template>
-
 </odoo>

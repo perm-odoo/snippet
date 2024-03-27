@@ -1,0 +1,12 @@
+<odoo>
+    <template id="s_employee_options" inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-js="s_employee_options" data-selector=".dynamic_snippet_employee">
+                <we-many2many string="Department" data-name="..." 
+                data-model="hr.department" data-fakem2m="true" 
+                data-fields="[&quot;name&quot;]" 
+                data-attribute-name="tempName" data-m2o-field="id" data-select-data-attribute="tempName"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>
