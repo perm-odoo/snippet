@@ -1,0 +1,24 @@
+<templates>
+    <t t-name="department-data">
+        <div class="row">
+            <h1>Employee List</h1>
+            <t t-foreach="data" t-as="department" t-key="department.id">
+                <div class="department-card">
+                    <div class="department-header">
+                        <h2 class="department-title"><t t-out="department.name"/></h2>
+                        <p class="department-manager">Manager: <t t-out="department.manager_name"/></p>
+                    </div>
+                    <div class="employee-list">
+                        <t t-foreach="department.employees" t-as="employee" t-key="employee.id">
+                            <div class="employee-card">
+                                <div class="employee-details">
+                                    <p class="employee-name"><t t-out="employee.name"/></p>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </div>
+    </t>
+</templates>
